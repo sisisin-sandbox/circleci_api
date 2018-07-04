@@ -113,7 +113,13 @@ function processDate(dateString) {
     .padStart(2, '0')}:${d
     .getMinutes()
     .toString()
-    .padStart(2, '0')}`;
+    .padStart(2, '0')}:${d
+    .getSeconds()
+    .toString()
+    .padStart(2, '0')}.${d
+    .getMilliseconds()
+    .toString()
+    .substr(0, 3)}`;
   return [date, time];
 }
 
